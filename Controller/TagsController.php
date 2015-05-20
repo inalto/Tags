@@ -78,6 +78,7 @@ class TagsController extends TagsAppController {
  */
 	public function admin_index() {
 		 $this->{$this->modelClass}->recursive = 0;
+		 	$this->set('showActions', false);
 		$this->set('tags', $this->Paginator->paginate());
 	}
 

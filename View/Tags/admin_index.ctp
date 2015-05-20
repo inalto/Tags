@@ -28,6 +28,7 @@ $this->Html
 	$tableHeaders = $this->Html->tableHeaders(array(
 		$this->Paginator->sort('name', __d('tags', 'Name')),
 		$this->Paginator->sort('keyname', __d('tags', 'Key Name')),
+		$this->Paginator->sort('id', __d('tags', 'Identifier')),
 		__d('tags', 'Actions'),
 	));
 	echo $this->Html->tag('thead', $tableHeaders);
@@ -54,6 +55,7 @@ foreach ($tags as $tag):
 	$rows[] = array(
 		$tag['Tag']['name'],
 		$tag['Tag']['keyname'],
+		$tag['Tag']['id'],
 		$this->Html->div('item-actions', $actions),
 	);
 

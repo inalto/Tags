@@ -19,19 +19,14 @@ $this->Html
 <div class="tags form">
 <?php echo $this->Form->create('Tag');?>
 
-
 <div class="row-fluid">
     <div class="span8">
-    
-	<fieldset>
- 		<legend><?php printf(__d('tags', 'Edit %s'), __d('tags', 'Tag')); ?></legend>
-	<?php
-		echo $this->Form->input('id');
-		echo $this->Form->input('identifier');
-		echo $this->Form->input('name', array('readonly' => 'readonly'));
-		echo $this->Form->input('keyname');
-	?>
-	</fieldset>
+    <fieldset>
+        <legend><?php printf(__d('tags', 'Edit %s'), __d('tags', 'Tag')); ?></legend>
+<?php
+        echo $this->Form->input('tags', array('label' => 'Tags (list of tags separated by comma)'));
+    ?>
+    </fieldset>
 </div>
     <div class="span4">
     <?php
@@ -43,7 +38,7 @@ $this->Html
         echo $this->Croogo->adminBoxes();
     ?>
     </div>
-    </div>
 <?php
         echo $this->Form->end();
     ?>
+</div>
