@@ -1,0 +1,16 @@
+    {
+	"name": "Tags",
+	"description": "Taggable Behavior",
+
+	"author": "CakeDC",
+	"authorEmail": "",
+	"authorUrl": "http://cakedc.com",
+
+	"dependencies": {
+		"plugins": [
+			"acl",
+			"extensions",
+		        "migrations"
+		]
+	}
+}

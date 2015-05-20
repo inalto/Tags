@@ -1,5 +1,7 @@
-Tags Plugin for CakePHP
+Tags Plugin for Croogo
 =======================
+
+Simply the CakeDC Tags plugin adapted for instant use with croogo.
 
 The **Tags** plugin includes the TaggableBehavior that allows you to simply tag everything.
 
