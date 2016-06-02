@@ -1,15 +1,22 @@
 Tags Plugin for Croogo
 =======================
 
+<<<<<<< HEAD
 Simply the CakeDC Tags plugin adapted for instant use with croogo.
 
 The **Tags** plugin includes the TaggableBehavior that allows you to simply tag everything.
 
 It saves all tags in a single tags table and connects any kind of records to them through the tagged table.
 
+=======
+>>>>>>> upstream/master
 [![Bake Status](https://secure.travis-ci.org/CakeDC/tags.png?branch=master)](http://travis-ci.org/CakeDC/tags)
 [![Downloads](https://poser.pugx.org/CakeDC/tags/d/total.png)](https://packagist.org/packages/CakeDC/tags)
 [![Latest Version](https://poser.pugx.org/CakeDC/tags/v/stable.png)](https://packagist.org/packages/CakeDC/tags)
+
+The **Tags** plugin includes the TaggableBehavior that allows you to simply tag everything.
+
+It saves all tags in a single tags table and connects any kind of records to them through the tagged table.
 
 Requirements
 ------------
