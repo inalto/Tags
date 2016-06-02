@@ -8,10 +8,18 @@
  * @copyright Copyright 2009-2014, Cake Development Corporation (http://cakedc.com)
  * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
+
+$this->Html
+    ->addCrumb('', '/admin', array('icon' => 'home'))
+    ->addCrumb(__d('tags', 'Tags'), array('plugin' => 'tags', 'controller' => 'tags', 'action' => 'index'));
+
 ?>
-<div class="tags view">
-<h2><?php echo __d('tags', 'Tag');?></h2>
-	<dl><?php $i = 0; $class = ' class="altrow"';?>
+<div class="tags form">
+<?php echo $this->Form->create('Tag');?>
+
+<div class="row-fluid">
+    <div class="span8">
+   <dl><?php $i = 0; $class = ' class="altrow"';?>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __d('tags', 'Id'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
 			<?php echo $tag['Tag']['id']; ?>
@@ -43,12 +51,18 @@
 			&nbsp;
 		</dd>
 	</dl>
-</div>
-<div class="actions">
-	<ul>
-		<li><?php echo $this->Html->link(sprintf(__d('tags', 'Edit %s'), __d('tags', 'Tag')), array('action' => 'edit', $tag['Tag']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(sprintf(__d('tags', 'Delete %s'), __d('tags', 'Tag')), array('action' => 'delete', $tag['Tag']['id']), null, sprintf(__d('tags', 'Are you sure you want to delete # %s?'), $tag['Tag']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(sprintf(__d('tags', 'List %s'), __d('tags', 'Tags')), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(sprintf(__d('tags', 'New %s'), __d('tags', 'Tag')), array('action' => 'add')); ?> </li>
-	</ul>
+	</div>
+    <div class="span4">
+    <?php
+        echo $this->Html->beginBox(__d('croogo', 'Publishing')) .
+        	$this->Html->link(sprintf(__d('tags', 'New %s'), __d('tags', 'Tag')), array('action' => 'add'), array('class' => 'btn')).
+            $this->Html->link(sprintf(__d('tags', 'Edit %s'), __d('tags', 'Tag')), array('action' => 'edit', $tag['Tag']['id']), array('class' => 'btn')) .
+            $this->Html->link(sprintf(__d('tags', 'Delete %s'), __d('tags', 'Tag')), array('action' => 'delete', $tag['Tag']['id']), null, sprintf(__d('tags', 'Are you sure you want to delete # %s?'), $tag['Tag']['id']), array('class' => 'cancel btn btn-danger'));
+        echo $this->Html->endBox();
+        echo $this->Croogo->adminBoxes();
+    ?>
+    </div>
+<?php
+        echo $this->Form->end();
+    ?>
 </div>

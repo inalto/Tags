@@ -1,15 +1,20 @@
 {
-  "name": "cakedc/tags",
-  "type": "cakephp-plugin",
-  "description": "Tags plugin for CakePHP.",
-  "homepage": "http://github.com/CakeDC/tags",
-  "keywords": ["cakephp", "tags", "plugin"],
+  "name": "inalto/tags",
+  "type": "croogo-plugin",
+  "description": "Tags plugin for Croogo.",
+  "homepage": "http://github.com/inalto/tags",
+  "keywords": ["croogo","cakephp", "tags", "plugin"],
   "license": "MIT",
   "authors": [
     {
       "name": "Cake Development Corporation",
       "email": "team@cakedc.com",
       "homepage": "http://cakedc.com"
+    },
+    {
+      "name": "Alain Martini",
+      "email": "webmaster@inalto.com",
+      "homepage": "http://github.com/inalto"
     }
   ],
   "require": {

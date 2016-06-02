@@ -13,7 +13,7 @@ $this->extend('/Common/admin_edit');
 
 $this->Html
     ->addCrumb('', '/admin', array('icon' => 'home'))
-    ->addCrumb(__d('croogo', 'Tags'), array('plugin' => 'tags', 'controller' => 'tags', 'action' => 'index'));
+    ->addCrumb(__d('tags', 'Tags'), array('plugin' => 'tags', 'controller' => 'tags', 'action' => 'index'));
 
 ?>
 <div class="tags form">
@@ -23,8 +23,11 @@ $this->Html
     <div class="span8">
     <fieldset>
         <legend><?php printf(__d('tags', 'Edit %s'), __d('tags', 'Tag')); ?></legend>
-<?php
-        echo $this->Form->input('tags', array('label' => 'Tags (list of tags separated by comma)'));
+    <?php
+        echo $this->Form->input('id');
+        echo $this->Form->input('identifier');
+        echo $this->Form->input('name', array('readonly' => 'readonly'));
+        echo $this->Form->input('keyname');
     ?>
     </fieldset>
 </div>
